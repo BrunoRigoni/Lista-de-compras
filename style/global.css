@@ -48,26 +48,37 @@ a {
 }
 
 body {
-  width: 100%;
   display: flex;
+  
   justify-content: center;
-  align-items: center;
 
 }
 
 #app {
-  max-width: 40rem;
+  max-width: 80em;
+  width: 100vw;
 }
 
-img {
-  width: 100%;
-  display: inline-block;
+header {
+  display: flex;
+  justify-content: center;
+  padding-block: 1.5rem 3.875rem;
+
+  & .logo {
+    min-width: 9.688rem;
+  }
 }
+
+
 
 @media (min-width: 20em) and (max-width: 79em) {
   #app {
     padding-inline: 2rem ;
     max-width: 100%;
+  }
+
+  .desktop-only {
+    display: none;
   }
 
 

@@ -1,0 +1,13 @@
+
+
+#back {
+  display: flex;
+  flex-direction: row;
+
+  
+  & img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+}
