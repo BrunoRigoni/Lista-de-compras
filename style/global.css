@@ -31,6 +31,7 @@
 
 h1 {
   font: 800 1.5rem/2 var(--ff);
+  margin-bottom: 2.75rem;
 }
 
 label {
