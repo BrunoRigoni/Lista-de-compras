@@ -29,10 +29,26 @@
         <h1>Compras da semana</h1>
 
         <form action="" method="post" id="buy-list">
-          <input type="text" id="add-item" name="new-item" placeholder="Adicione um novo item"/>
-          <button type="submit" class="add-item">Adicionar item</button>
+          <input
+            type="text"
+            id="add-item"
+            name="new-item"
+            placeholder="Adicione um novo item"
+          />
+          <button type="submit" class="add-item" id="submitForm">Adicionar item</button>
         </form>
+
+        <ul>
+          <li id="items">
+            <div id="item">
+              <input type="checkbox"  id="checked">
+              <label for="checked" id="item-name"> <span></span> Pão de forma</label>
+               <button id="remove"><img src="./assets/icons/bin.svg" alt=""></button>
+            </div>
+          </li>
+        </ul>
       </section>
     </div>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
