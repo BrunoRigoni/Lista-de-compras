@@ -27,7 +27,7 @@
     margin-top: 4.875rem;
   }
 }
-#remove {
+.remove {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-#remove:hover {
+remove:hover {
 animation: binRotate 2s;
 cursor: pointer;
 }
@@ -63,7 +63,7 @@ cursor: pointer;
 input[type="checkbox"] {
   display: none;
 }
-input[type="checkbox"] + label span {
+input[type="checkbox"] + label .checkbox-icon {
   background-image: url(../assets/checks/checkbox.svg);
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
@@ -72,7 +72,7 @@ input[type="checkbox"] + label span {
   height: 1rem;
 }
 
-input[type="checkbox"] + label span:hover {
+input[type="checkbox"] + label .checkbox-icon:hover {
   width:  1rem;
   height: 1rem;
   background-size: 1rem 1rem;
@@ -81,7 +81,7 @@ input[type="checkbox"] + label span:hover {
   background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:checked + label span {
+input[type="checkbox"]:checked + label .checkbox-icon {
   width:  1rem;
   height: 1rem;
   background-size: 1rem 1rem;
