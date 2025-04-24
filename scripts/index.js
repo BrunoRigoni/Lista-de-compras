@@ -14,6 +14,4 @@ input.addEventListener("input", (e) => {
 //criando evento para garantir que a página não atualize ao enviar o formulário.
 form.onsubmit = (event) => {
   event.preventDefault();
-
-  addToList();
 };
