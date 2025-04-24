@@ -7,62 +7,52 @@ const button = document.getElementById("submitForm");
 input.addEventListener("input", () => {
   let regex = /\d+$/;
   input.value = input.value.replace(regex, "");
+  let itemText = input.value;
 });
 
 //criando evento para garantir que a página não atualize ao enviar o formulário.
 form.onsubmit = (event) => {
   event.preventDefault();
-
 };
 
-
-
-
 function createNewItem() {
+  //SELECIONANDO A UL
+  const items = document.querySelector("ul");
 
-//SELECIONANDO A UL
-const items = document.querySelector("ul");
+  //CRIANDO ELEMENTOS
+  const newItemAdd = document.createElement("li");
+  const newChecked = document.createElement("input");
+  const newLabel = document.createElement("label");
+  const newCheckbox = document.createElement("span");
+  const newItemName = document.createElement("p");
+  const btn = document.createElement("button");
+  const binImg = document.createElement("img");
 
-//CRIANDO ELEMENTOS
-const newItemAdd = document.createElement("li");
-const newChecked = document.createElement("input");
-const newLabel = document.createElement("label");
-const newCheckbox = document.createElement("span");
-const newItemName = document.createElement("p");
-const btn = document.createElement("button");
-const binImg = document.createElement("img");
+  binImg.src = "./assets/icons/bin.svg";
+  newItemAdd.classList.add("item-style");
+  newItemName.textContent = input.value;
 
-binImg.src = "./assets/icons/bin.svg";
-newItemAdd.classList.add("item-style");
-newItemName.textContent = "Bolo";
+  newChecked.type = "checkbox";
+  newLabel.classList.add("name-item");
 
+  newCheckbox.classList.add("checkbox-icon");
+  btn.classList.add("remove");
 
-newChecked.type = "checkbox";
-newLabel.classList.add("name-item");
+  newLabel.append(newCheckbox, newItemName);
+  newItemAdd.append(newChecked, newLabel, btn);
+  btn.append(binImg);
 
-newCheckbox.classList.add("checkbox-icon");
-btn.classList.add("remove");
+  console.log(newItemAdd);
 
-
-newLabel.append(newCheckbox, newItemName);
-newItemAdd.append(newChecked, newLabel, btn)
-btn.append(binImg)
-
-console.log(newItemAdd);
-
-
-items.append(newItemAdd);
+  items.append(newItemAdd);
 }
-
 
 button.onclick = (event) => {
-  createNewItem()
-}
-
-
+  createNewItem();
+};
 
 button.onsubmit = (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-  createNewItem()
-}
+  createNewItem();
+};
