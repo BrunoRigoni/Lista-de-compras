@@ -54,9 +54,13 @@ body {
 
   justify-content: center;
 }
-li {
+ul {
   list-style: none;
   margin-block: 2.5rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+
 }
 #item {
   display: flex;
