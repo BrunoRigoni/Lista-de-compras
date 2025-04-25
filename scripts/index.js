@@ -13,7 +13,6 @@ input.addEventListener("input", () => {
 //criando evento para garantir que a página não atualize ao enviar o formulário.
 form.onsubmit = (event) => {
   event.preventDefault();
-
 };
 
 function createNewItem() {
@@ -26,7 +25,6 @@ function createNewItem() {
   const newChecked = document.createElement("input");
   newChecked.type = "checkbox";
 
-
   const newItemName = document.createElement("p");
   const btn = document.createElement("button");
   const binImg = document.createElement("img");
@@ -35,10 +33,6 @@ function createNewItem() {
   newItemAdd.classList.add("item-style");
   newItemName.textContent = input.value;
 
-
-  
-
-  
   btn.classList.add("remove");
 
   newItemAdd.append(newChecked, newItemName, btn);
@@ -50,22 +44,8 @@ function createNewItem() {
 }
 
 button.onclick = (event) => {
-  createNewItem();
-  form.reset()
-};
-
-button.onsubmit = (event) => {
   event.preventDefault();
-
   createNewItem();
-  hasChecked(newChecked)
+  form.reset();
 };
 
-  function hasChecked(e, newChecked)  {
-    newChecked.addEventListener("click", (e) => {
-      console.log(newChecked);
-
-    })
-
-  }
-  
