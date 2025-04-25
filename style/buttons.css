@@ -38,15 +38,14 @@
   cursor: pointer;
 }
 
-remove:hover {
-animation: binRotate 2s;
-cursor: pointer;
+.remove:hover {
+  animation: binRotate 2s;
+  cursor: pointer;
 }
 
 @keyframes binRotate {
   25% {
-        transform: rotate(-25deg);
-
+    transform: rotate(-25deg);
   }
   50% {
     transform: rotate(25deg);
@@ -60,38 +59,30 @@ cursor: pointer;
   }
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-input[type="checkbox"] + label .checkbox-icon {
+input[type="checkbox" i] {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
   background-image: url(../assets/checks/checkbox.svg);
-  background-repeat: no-repeat;
-  background-size: 1rem 1rem;
-  background-position: center;
-  width:  1rem;
-  height: 1rem;
+  background-size: 1rem;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	-o-appearance:none;
+	outline: none;
+	content: none;	
 }
 
-input[type="checkbox"] + label .checkbox-icon:hover {
-  width:  1rem;
-  height: 1rem;
-  background-size: 1rem 1rem;
-  background-position:center;
+
+input[type="checkbox" i]:hover {
+  cursor: pointer;
+  width: 1rem;
   background-image: url(../assets/checks/checkhover.svg);
-  background-repeat: no-repeat;
+  background-size: 1rem;
 }
 
-input[type="checkbox"]:checked + label .checkbox-icon {
-  width:  1rem;
-  height: 1rem;
-  background-size: 1rem 1rem;
-  background-position:center;
+input[type="checkbox" i]:checked {
+  cursor: pointer;
+  width: 1rem;
   background-image: url(../assets/checks/checked.svg);
-  background-repeat: no-repeat;
+  background-size: 1rem;
 }
-
-
-
-
-
-
