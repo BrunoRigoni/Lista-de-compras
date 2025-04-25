@@ -70,6 +70,11 @@ ul {
   border-radius: 0.5rem;
   font: 400 1rem/1.25 var(--ff);
   gap: 0.75rem;
+
+  & p {
+    margin-right: auto;
+  }
+
 }
 .name-item {
   margin-right: auto;
