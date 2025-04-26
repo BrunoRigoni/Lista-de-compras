@@ -60,7 +60,8 @@ button.onclick = (event) => {
   form.reset();
 };
 
-reloadPage.addEventListener("click", (e) => {
-  e.preventDefault
-  reloadPage.loca
-})
+function reload() {
+      window.location.reload();
+}
+
+reloadPage.addEventListener("click", reload);
