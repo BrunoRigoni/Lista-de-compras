@@ -76,6 +76,10 @@ ul {
   }
 
 }
+
+
+
+
 .name-item {
   margin-right: auto;
   font: 400 1rem/1.25 var(--ff);
@@ -88,6 +92,8 @@ ul {
     margin-right: .75rem;
   }
 }
+
+
 
 #app {
   max-width: 80em;

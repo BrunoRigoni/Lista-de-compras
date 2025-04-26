@@ -8,7 +8,7 @@
 #add-item {
   border-radius: .5rem;
   border: 3px solid var(--border-primary);
-  color: var(--border-primary);
+  color:black;
   flex-grow: 1;
   padding: .75rem 1.5rem;
   background-color: var(--background-secondary);
@@ -18,6 +18,11 @@
 #add-item::placeholder {
     color: var(--content-tertiary);
     font: 400 1rem/1.4 var(--ff);
+}
+
+#add-item:focus{
+    border: 2px solid var(--border-secondary);
+
 }
 
 @media (min-width: 20em) and (max-width: 79em) {

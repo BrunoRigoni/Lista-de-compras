@@ -19,6 +19,8 @@
   padding: 0.75rem 1.5rem;
 }
 
+
+
 @media (min-width: 20em) and (max-width: 79em) {
   .add-item {
     width: 100%;
@@ -59,6 +61,9 @@
   }
 }
 
+
+
+
 input[type="checkbox" i] {
   cursor: pointer;
   width: 1rem;
@@ -85,4 +90,65 @@ input[type="checkbox" i]:checked {
   width: 1rem;
   background-image: url(../assets/checks/checked.svg);
   background-size: 1rem;
+}
+
+
+
+
+.remove-alert {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-danger);
+  border-radius: 0.5rem;
+  font: 400 1rem/1.25 var(--ff);
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+  
+  
+
+  & p {
+    margin-right: auto;
+    color: var(--always-white);
+  }
+
+  & a {
+    display: flex;
+
+    &:hover {
+      animation: closeRotate infinite 3s ease-in-out ;
+
+    }
+
+    & img {
+      width: max-content;
+      
+    }
+
+  }
+
+}
+
+
+.hide {
+  display: none;
+}
+
+
+@keyframes closeRotate {
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+        transform: rotate(360deg);
+  }
 }

@@ -40,16 +40,20 @@
           </button>
         </form>
 
-        <ul>
-          <li id="item" class="item-style">
-                <input type="checkbox" name="check" id="check">
-                <p>Pão de forma</p>
-                <button id="remove" class="remove">
-                <img src="./assets/icons/bin.svg" alt="" />
-            </button>   
-          </li>
+        <ul id="itemsList">
+
         </ul>
       </section>
+
+      <p>
+        <ul>
+          <li id="remove-alert" class="remove-alert hide">
+          <img src="./assets/icons/waring.svg" alt="">                
+          <p>O item foi removido da lista</p>
+          <a class="closeAlert" onclick="closeAlert"><img src="./assets/icons/delete-sm.svg" alt=""></a> 
+          </li>
+        </ul>
+      </p>
     </div>
     <script src="./scripts/index.js"></script>
   </body>
