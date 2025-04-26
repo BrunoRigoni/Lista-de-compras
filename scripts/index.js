@@ -1,13 +1,20 @@
 //capturando dados do formulário.
 const form = document.getElementById("buy-list");
 const input = document.getElementById("add-item");
+
 const button = document.getElementById("submitForm");
+const removeAlert = document.getElementById("remove-alert");
+const closeAlert = document.querySelector(".closeAlert");
+
+const reloadPage = document.querySelector("#back");
+
+//SELECIONANDO A UL
+const items = document.querySelector("#itemsList");
 
 //manipulando os dados do input para receber apenas strings.
 input.addEventListener("input", () => {
   let regex = /\d+$/;
   input.value = input.value.replace(regex, "");
-  let itemText = input.value;
 });
 
 //criando evento para garantir que a página não atualize ao enviar o formulário.
@@ -16,9 +23,6 @@ form.onsubmit = (event) => {
 };
 
 function createNewItem() {
-  //SELECIONANDO A UL
-  const items = document.querySelector("ul");
-
   //CRIANDO ELEMENTOS
   const newItemAdd = document.createElement("li");
 
@@ -26,22 +30,29 @@ function createNewItem() {
   newChecked.type = "checkbox";
 
   const newItemName = document.createElement("p");
-  const btn = document.createElement("button");
+  const binBtn = document.createElement("button");
   const binImg = document.createElement("img");
 
   binImg.src = "./assets/icons/bin.svg";
   newItemAdd.classList.add("item-style");
   newItemName.textContent = input.value;
 
-  btn.classList.add("remove");
+  binBtn.classList.add("remove");
 
-  newItemAdd.append(newChecked, newItemName, btn);
-  btn.append(binImg);
+  binBtn.addEventListener("click", () => {
+    newItemAdd.style.display = "none";
 
-  console.log(newItemAdd);
+    removeAlert.classList.remove("hide");
+  });
 
+  newItemAdd.append(newChecked, newItemName, binBtn);
+  binBtn.append(binImg);
   items.append(newItemAdd);
 }
+
+closeAlert.onclick = () => {
+  removeAlert.classList.add("hide");
+};
 
 button.onclick = (event) => {
   event.preventDefault();
@@ -49,3 +60,7 @@ button.onclick = (event) => {
   form.reset();
 };
 
+reloadPage.addEventListener("click", (e) => {
+  e.preventDefault
+  reloadPage.loca
+})
