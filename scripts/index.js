@@ -2,6 +2,8 @@
 const form = document.getElementById("buy-list");
 const input = document.getElementById("add-item");
 
+
+
 const button = document.getElementById("submitForm");
 const removeAlert = document.getElementById("remove-alert");
 const closeAlert = document.querySelector(".closeAlert");
@@ -35,6 +37,8 @@ function createNewItem() {
 
   binImg.src = "./assets/icons/bin.svg";
   newItemAdd.classList.add("item-style");
+
+
   newItemName.textContent = input.value;
 
   binBtn.classList.add("remove");
@@ -55,9 +59,16 @@ closeAlert.onclick = () => {
 };
 
 button.onclick = (event) => {
-  event.preventDefault();
-  createNewItem();
-  form.reset();
+
+  if (input.value.length > 0) {
+      event.preventDefault();
+      createNewItem();
+      form.reset();
+  } else {
+    console.log("nada digitado");
+  }
+
+
 };
 
 function reload() {
